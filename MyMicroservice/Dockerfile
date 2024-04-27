@@ -3,7 +3,7 @@ WORKDIR /src
 COPY MyMicroservice.csproj .
 RUN dotnet restore
 COPY . .
-RUN dotnet publish -c release -o app
+RUN dotnet publish -c release -o /app
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
